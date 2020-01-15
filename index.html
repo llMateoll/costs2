@@ -1,0 +1,1451 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Poppins|Signika|Ubuntu&amp;display=swap" rel="stylesheet" />
+<style type="text/css">/* @font-face {
+      font-family: "Din-Black Italic";
+      src: url("https://fontoteka.com/font/din-pro-black-italic");
+    } */
+    
+    body {
+      line-height: 1;
+      margin: 0%;
+      padding: 0%;
+      scroll-behavior: smooth;
+    }
+    /* STYLE BACKGROUND */
+    @media screen and (max-width: 480px) {
+      html,body {
+        min-width: 320px;
+      }
+    }
+    html {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+    *,
+    *:before,
+    *:after {
+      box-sizing: inherit;
+    }
+    body {
+      background-color: white;
+      background-image: linear-gradient(to top,rgba(20, 20, 20, 0.945),rgba(20, 20, 20, 0.945)),
+        url("https://lets.gohubtek.com/backgruond1");
+      background-size: auto, cover;
+      background-attachment: fixed, fixed;
+      background-position: center, center;
+    }
+    /* TYPE ATTRIBUTES */
+    body,input,select,textarea {
+      color: #ffffff;
+      font-family: "Source Sans Pro", Helvetica, sans-serif;
+      font-size: 16.5pt;
+      font-weight: 300;
+      line-height: 1.65;
+    }
+    @media screen and (max-width: 1680px) {
+      body,input,select,textarea {
+        font-size: 13pt;
+      }
+    }
+    @media screen and (max-width: 1280px) {
+      body,input,select,textarea {
+        font-size: 12pt;
+      }
+    }
+    @media screen and (max-width: 980px) {
+      body,input,select,textarea {
+        font-size: 12pt;
+      }
+    }
+    @media screen and (max-width: 736px) {
+      body,input,select,textarea {
+        font-size: 12pt;
+      }
+    }
+    @media screen and (max-width: 480px) {
+      body,input,select,textarea {
+        font-size: 12pt;
+      }
+    }
+    a {
+      -moz-transition: color 0.2s ease-in-out,
+        border-bottom-color 0.2s ease-in-out;
+      -webkit-transition: color 0.2s ease-in-out,
+        border-bottom-color 0.2s ease-in-out;
+      -ms-transition: color 0.2s ease-in-out,
+        border-bottom-color 0.2s ease-in-out;
+      transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
+      color: #ffffff;
+      text-decoration: none;
+    }
+    a:hover {
+      border-bottom-color: transparent;
+      color: #ffffff !important;
+      text-decoration: none;
+    }
+    a.special:not(.button) {
+      text-decoration: none;
+      border-bottom: 0;
+      display: block;
+      font-family: Raleway, Helvetica, sans-serif;
+      font-size: 0.8em;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      margin: 0 0 2em 0;
+      text-transform: uppercase;
+    }
+    a.special:not(.button):before {
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-font-smoothing: antialiased;
+      display: inline-block;
+      font-style: normal;
+      font-variant: normal;
+      text-rendering: auto;
+      line-height: 1;
+      text-transform: none !important;
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+    }
+    a.special:not(.button):before {
+      -moz-transition: background-color 0.2s ease-in-out;
+      -webkit-transition: background-color 0.2s ease-in-out;
+      -ms-transition: background-color 0.2s ease-in-out;
+      transition: background-color 0.2s ease-in-out;
+      border-radius: 100%;
+      border: solid 2px rgba(255, 255, 255, 0.125);
+      content: "\f105";
+      display: inline-block;
+      font-size: 1.25em;
+      height: 2em;
+      line-height: 1.75em;
+      margin-right: 0.85em;
+      text-align: center;
+      text-indent: 0.15em;
+      vertical-align: middle;
+      width: 2em;
+    }
+    a.special:not(.button):hover:before {
+      background-color: rgba(255, 255, 255, 0.025);
+    }
+    a.special:not(.button):active:before {
+      background-color: rgba(255, 255, 255, 0.075);
+    }
+    p {
+      margin: 0 0 1.5em 0;
+    }
+    h1,h2,h3,h4,h5,h6 {
+      color: white;
+      font-family: Raleway, Helvetica, sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      margin: 0 0 1em 0;
+      text-transform: uppercase;
+    }
+    h1 a,h2 a,h3 a,h4 a,h5 a,h6 a {
+      color: inherit;
+      text-decoration: none;
+      border-bottom: 0;
+    }
+    h1 span,h2 span,h3 span,h4 span,h5 span,h6 span {
+      font-weight: 200;
+    }
+    h1.major,h2.major,h3.major,h4.major,h5.major,h6.major {
+      padding-bottom: 1em;
+      border-bottom: solid 2px rgba(255, 255, 255, 0.600);
+    }
+    h2 {
+      font-size: 1.2em;
+    }
+    h3 {
+      font-size: 0.9em;
+    }
+    h4 {
+      font-size: 0.7em;
+    }
+    h5 {
+      font-size: 0.7em;
+    }
+    h6 {
+      font-size: 0.7em;
+    }
+    @media screen and (max-width: 736px) {
+      h2 {
+        font-size: 1em;
+      }
+      h3 {
+        font-size: 0.8em;
+      }
+    }
+    hr {
+      border: 0;
+      border-bottom: solid 2px rgba(255, 255, 255, 0.125);
+      margin: 2.5em 0;
+    }
+    hr.major {
+      margin: 4em 0;
+    }
+    /* FORM */
+    form {
+      margin: 0 0 .5em 0;
+    }
+    form > :last-child {
+      margin-bottom: 0;
+    }
+    form > .fields {
+      display: -moz-flex;
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      -moz-flex-wrap: wrap;
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      width: calc(100% + 3em);
+      margin: -1.5em 0 2em -1.5em;
+    }
+    form > .fields > .field {
+      -moz-flex-grow: 0;
+      -webkit-flex-grow: 0;
+      -ms-flex-grow: 0;
+      flex-grow: 0;
+      -moz-flex-shrink: 0;
+      -webkit-flex-shrink: 0;
+      -ms-flex-shrink: 0;
+      flex-shrink: 0;
+      padding: 1.5em 0 0 1.5em;
+      width: calc(100% - 1.5em);
+    }
+    form > .fields > .field.half {
+      width: calc(50% - 0.75em);
+    }
+    form > .fields > .field.third {
+      width: calc(100% / 3 - 0.5em);
+    }
+    form > .fields > .field.quarter {
+      width: calc(25% - 0.375em);
+    }
+    @media screen and (max-width: 480px) {
+      form > .fields {
+        width: calc(100% + 3em);
+        margin: -1.5em 0 2em -1.5em;
+      }
+      form > .fields > .field {
+        padding: 1.5em 0 0 1.5em;
+        width: calc(100% - 1.5em);
+      }
+      form > .fields > .field.half {
+        width: calc(100% - 1.5em);
+      }
+      form > .fields > .field.third {
+        width: calc(100% - 1.5em);
+      }
+      form > .fields > .field.quarter {
+        width: calc(100% - 1.5em);
+      }
+    }
+    label {
+      color: #ffffff;
+      display: block;
+      font-family: Raleway, Helvetica, sans-serif;
+      font-size: 0.8em;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      margin: 0 0 0.7em 0;
+      text-transform: uppercase;
+    }
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type="tel"],
+    select,
+    textarea {
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      -ms-appearance: none;
+      appearance: none;
+      background: rgba(255, 255, 255, 0.025);
+      border-radius: 5px;
+      border: none;
+      border: solid 2px rgba(255, 255, 255, 0.600);
+      color: inherit;
+      display: block;
+      outline: 0;
+      padding: 0 1em;
+      text-decoration: none;
+      width: 100%;
+    }
+    input[type="text"]:invalid,
+    input[type="password"]:invalid,
+    input[type="email"]:invalid,
+    input[type="tel"]:invalid,
+    select:invalid,
+    textarea:invalid {
+      box-shadow: none;
+    }
+    input[type="text"]:focus,
+    input[type="password"]:focus,
+    input[type="email"]:focus,
+    input[type="tel"]:focus,
+    select:focus,
+    textarea:focus {
+      border-color: rgba(255, 255, 255, 0.5);
+    }
+    select {
+      background-size: 1.25rem;
+      background-repeat: no-repeat;
+      background-position: calc(100% - 1rem) center;
+      height: 2.75em;
+      padding-right: 2.75em;
+      text-overflow: ellipsis;
+    }
+    select option {
+      color: #ffffff;
+      background: #474747;
+    }
+    select:focus::-ms-value {
+      background-color: transparent;
+    }
+    select::-ms-expand {
+      display: none;
+    }
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    select {
+      height: 2.75em;
+    }
+    textarea {
+      padding: 0.75em 1em;
+    }
+    input[type="checkbox"],
+    input[type="radio"] {
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      -ms-appearance: none;
+      appearance: none;
+      display: block;
+      float: left;
+      margin-right: -2em;
+      opacity: 0;
+      width: 1em;
+      z-index: -1;
+    }
+    input[type="checkbox"] + label,
+    input[type="radio"] + label {
+      text-decoration: none;
+      color: #ffffff;
+      cursor: pointer;
+      display: inline-block;
+      font-size: 1em;
+      font-family: "Source Sans Pro", Helvetica, sans-serif;
+      text-transform: none;
+      letter-spacing: 0;
+      font-weight: 300;
+      padding-left: 2.4em;
+      padding-right: 0.75em;
+      position: relative;
+    }
+    input[type="checkbox"] + label:before,
+    input[type="radio"] + label:before {
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-font-smoothing: antialiased;
+      display: inline-block;
+      font-style: normal;
+      font-variant: normal;
+      text-rendering: auto;
+      line-height: 1;
+      text-transform: none !important;
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+    }
+    input[type="checkbox"] + label:before,
+    input[type="radio"] + label:before {
+      background: rgba(255, 255, 255, 0.025);
+      border-radius: 5px;
+      border: solid 2px rgba(255, 255, 255, 0.125);
+      content: "";
+      display: inline-block;
+      font-size: 0.8em;
+      height: 2.0625em;
+      left: 0;
+      line-height: 2.0625em;
+      position: absolute;
+      text-align: center;
+      top: 0;
+      width: 2.0625em;
+    }
+    input[type="checkbox"]:checked + label:before,
+    input[type="radio"]:checked + label:before {
+      background: #ffffff;
+      border-color: #ffffff;
+      content: "\f00c";
+      color: #474747;
+    }
+    input[type="checkbox"]:focus + label:before,
+    input[type="radio"]:focus + label:before {
+      border-color: #4c5c96;
+    }
+    input[type="checkbox"] + label:before {
+      border-radius: 5px;
+    }
+    input[type="radio"] + label:before {
+      border-radius: 100%;
+    }
+    ::-webkit-input-placeholder {
+      color: rgba(255, 255, 255, 0.35) !important;
+      opacity: 1;
+    }
+    :-moz-placeholder {
+      color: rgba(255, 255, 255, 0.35) !important;
+      opacity: 1;
+    }
+    ::-moz-placeholder {
+      color: rgba(255, 255, 255, 0.35) !important;
+      opacity: 1;
+    }
+    :-ms-input-placeholder {
+      color: rgba(255, 255, 255, 0.35) !important;
+      opacity: 1;
+    }
+    /* ACTIONS */
+    ul.actions {
+      display: -moz-flex;
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      cursor: default;
+      list-style: none;
+      margin-left: -1em;
+      padding-left: 0;
+    }
+    ul.actions li {
+      padding: 0 0 0 1em;
+      vertical-align: middle;
+    }
+    ul.actions.special {
+      -moz-justify-content: center;
+      -webkit-justify-content: center;
+      -ms-justify-content: center;
+      justify-content: center;
+      width: 100%;
+      margin-left: 0;
+    }
+    ul.actions.special li:first-child {
+      padding-left: 0;
+    }
+    ul.actions.stacked {
+      -moz-flex-direction: column;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      margin-left: 0;
+    }
+    ul.actions.stacked li {
+      padding: 1.3em 0 0 0;
+    }
+    ul.actions.stacked li:first-child {
+      padding-top: 0;
+    }
+    ul.actions.fit {
+      width: calc(100% + 1em);
+    }
+    ul.actions.fit li {
+      -moz-flex-grow: 1;
+      -webkit-flex-grow: 1;
+      -ms-flex-grow: 1;
+      flex-grow: 1;
+      -moz-flex-shrink: 1;
+      -webkit-flex-shrink: 1;
+      -ms-flex-shrink: 1;
+      flex-shrink: 1;
+      width: 100%;
+    }
+    ul.actions.fit li > * {
+      width: 100%;
+    }
+    ul.actions.fit.stacked {
+      width: 100%;
+    }
+    @media screen and (max-width: 480px) {
+      ul.actions:not(.fixed) {
+        -moz-flex-direction: column;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        margin-left: 0;
+        width: 100% !important;
+      }
+      ul.actions:not(.fixed) li {
+        -moz-flex-grow: 1;
+        -webkit-flex-grow: 1;
+        -ms-flex-grow: 1;
+        flex-grow: 1;
+        -moz-flex-shrink: 1;
+        -webkit-flex-shrink: 1;
+        -ms-flex-shrink: 1;
+        flex-shrink: 1;
+        padding: 1em 0 0 0;
+        text-align: center;
+        width: 100%;
+      }
+      ul.actions:not(.fixed) li > * {
+        width: 100%;
+      }
+      ul.actions:not(.fixed) li:first-child {
+        padding-top: 0;
+      }
+      ul.actions:not(.fixed) li input[type="submit"],
+      ul.actions:not(.fixed) li input[type="reset"],
+      ul.actions:not(.fixed) li input[type="button"],
+      ul.actions:not(.fixed) li button,
+      ul.actions:not(.fixed) li .button {
+        width: 100%;
+      }
+      ul.actions:not(.fixed) li input[type="submit"].icon:before,
+      ul.actions:not(.fixed) li input[type="reset"].icon:before,
+      ul.actions:not(.fixed) li input[type="button"].icon:before,
+      ul.actions:not(.fixed) li button.icon:before,
+      ul.actions:not(.fixed) li .button.icon:before {
+        margin-left: -0.5rem;
+      }
+    }
+    /* ICONS */
+    ul.icons {
+      cursor: default;
+      list-style: none;
+      padding-left: 0;
+    }
+    ul.icons li {
+      display: inline-block;
+      padding: 0 1em 0 0;
+      cursor: pointer;
+    }
+    ul.icons li:last-child {
+      padding-right: 0;
+    }
+    ul.icons li .icon:before {
+      font-size: 1.25em;
+    }
+    /* CONTACT */
+    ul.contact {
+      list-style: none;
+      padding: 0;
+      border-left: 2px solid rgba(255, 255, 255, 0.600);
+    }
+    ul.contact .icons:before {
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-font-smoothing: antialiased;
+      display: inline-block;
+      font-variant: normal;
+      text-rendering: auto;
+      line-height: 1;
+      text-transform: none !important;
+      font-weight: 400;
+    }
+    @media screen and (max-width: 736px) {
+      ul.contact{
+          border-left: none;
+      }
+        
+      ul.contact .icons {
+        margin: 1.5em 0 0 0;
+        width: 100%;
+      }
+      .col-md-6{
+        padding-left: 0%;
+      }
+      .sharebottom{
+      padding-bottom: 30px;
+      padding-left: 0% !important;
+    }
+    }
+    .contact .icons{
+      margin-bottom: 56px;
+      margin-left: 10%;
+      border-radius: 5px;
+      border: solid 2px rgba(255, 255, 255, 0.600);
+      display: inline-block;
+      font-size: 20px;
+      height: 2.5em;
+      left: 0;
+      line-height: 2.35em;
+      text-align: center;
+      top: 0;
+      width: 20em;
+      cursor: pointer;
+    }
+    .contact .icons:hover{
+      background-color: rgba(255, 255, 255, 0.170);
+      border-radius: 5px;
+      color: rgb(190, 193, 218);
+    }
+    .row{
+      margin-left: 0% !important;
+    }
+    .sharebottom{
+      padding-bottom: 30px;
+      padding-left: 45px;
+    }
+    /* BUTTON */
+    input[type="submit"],
+    input[type="reset"],
+    input[type="button"],button,
+    .button {
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      -ms-appearance: none;
+      appearance: none;
+      -moz-transition: background-color 0.2s ease-in-out;
+      -webkit-transition: background-color 0.2s ease-in-out;
+      -ms-transition: background-color 0.2s ease-in-out;
+      transition: background-color 0.2s ease-in-out;
+      background-color: transparent;
+      border-radius: 5px;
+      border: 0;
+      box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.600);
+      color: #ffffff !important;
+      cursor: pointer;
+      display: inline-block;
+      font-family: Raleway, Helvetica, sans-serif;
+      font-size: 0.8em;
+      font-weight: 700;
+      height: 3.75em;
+      letter-spacing: 0.1em;
+      line-height: 3.75em;
+      padding: 0 2.25em;
+      text-align: center;
+      text-decoration: none;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+    input[type="submit"]:hover,
+    input[type="reset"]:hover,
+    input[type="button"]:hover,
+    button:hover,
+    .button:hover {
+      background-color: rgba(255, 255, 255, 0.11);
+    }
+    input[type="submit"]:active,
+    input[type="reset"]:active,
+    input[type="button"]:active,
+    button:active,
+    .button:active {
+      background-color: rgba(255, 255, 255, 0.11);
+    }
+    input[type="submit"].icon:before,
+    input[type="reset"].icon:before,
+    input[type="button"].icon:before,
+    button.icon:before,
+    .button.icon:before {
+      margin-right: 0.5em;
+      color: rgba(255, 255, 255, 0.35);
+    }
+    input[type="submit"].primary,
+    input[type="reset"].primary,
+    input[type="button"].primary,
+    button.primary,
+    .button.primary {
+      background-color: rgb(63,67,144);
+      box-shadow: none;
+    }
+    input[type="submit"].primary:hover,
+    input[type="reset"].primary:hover,
+    input[type="button"].primary:hover,
+    button.primary:hover,
+    .button.primary:hover {
+      background-color: #53639e;
+    }
+    input[type="submit"].primary:active,
+    input[type="reset"].primary:active,
+    input[type="button"].primary:active,
+    button.primary:active,
+    .button.primary:active {
+      background-color: #45558d;
+    }
+    input[type="submit"].primary.icon:before,
+    input[type="reset"].primary.icon:before,
+    input[type="button"].primary.icon:before,
+    button.primary.icon:before,
+    .button.primary.icon:before {
+      color: #7985b0;
+    }
+    input[type="submit"].fit,
+    input[type="reset"].fit,
+    input[type="button"].fit,
+    button.fit,
+    .button.fit {
+      width: 100%;
+    }
+    input[type="submit"].small,
+    input[type="reset"].small,
+    input[type="button"].small,
+    button.small,
+    .button.small {
+      font-size: 0.6em;
+    }
+    input[type="submit"].large,
+    input[type="reset"].large,
+    input[type="button"].large,
+    button.large,
+    .button.large {
+      font-size: 1em;
+    }
+    input[type="submit"].disabled,
+    input[type="submit"]:disabled,
+    input[type="reset"].disabled,
+    input[type="reset"]:disabled,
+    input[type="button"].disabled,
+    input[type="button"]:disabled,
+    button.disabled,
+    button:disabled,
+    .button.disabled,
+    .button:disabled {
+      opacity: 0.25;
+    }
+    /* @media screen and (max-width: 480px) {
+      input[type="submit"],
+      input[type="reset"],
+      input[type="button"],
+      button,
+      .button {
+        padding: 0;
+      }
+    } */
+    /* HEADER */
+    #header {
+      -moz-transition: background-color 0.2s ease-in-out;
+      -webkit-transition: background-color 0.2s ease-in-out;
+      -ms-transition: background-color 0.2s ease-in-out;
+      transition: background-color 0.2s ease-in-out;
+      background-color: rgba(0, 0, 0, 0.85);
+      border-bottom: 1px solid white;
+      height: 3.5em;
+      left: 0;
+      line-height: 3.5em;
+      padding: 0 1.25em;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 10000;
+    }
+    #header img{
+        padding-top: 8px;
+        display: flex;
+        margin: 0 auto;
+    }
+    #header h1 {
+      -moz-transition: opacity 0.2s ease-in-out, visibility 0.2s;
+      -webkit-transition: opacity 0.2s ease-in-out, visibility 0.2s;
+      -ms-transition: opacity 0.2s ease-in-out, visibility 0.2s;
+      transition: opacity 0.2s ease-in-out, visibility 0.2s;
+      border-bottom: 0;
+      font-size: 0.8em;
+      margin-bottom: 0;
+      opacity: 1;
+      visibility: visible;
+    }
+    #header h1 a {
+      border: 0;
+    }
+    #header nav {
+      font-family: Raleway, Helvetica, sans-serif;
+      font-size: 0.8em;
+      font-weight: 700;
+      height: 3em;
+      letter-spacing: 0.1em;
+      line-height: 3em;
+      position: absolute;
+      right: 0.7em;
+      text-transform: uppercase;
+      top: 0.7em;
+    }
+    #header nav a {
+      border: 0;
+      display: inline-block;
+      padding: 0 1em;
+    }
+    #header nav a:before {
+      float: right;
+      margin-left: 0.75em;
+    }
+    #header nav a[href="#menu"] {
+      text-decoration: none;
+      -moz-transition: background-color 0.2s ease-in-out;
+      -webkit-transition: background-color 0.2s ease-in-out;
+      -ms-transition: background-color 0.2s ease-in-out;
+      transition: background-color 0.2s ease-in-out;
+      border-radius: 5px;
+      box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.125);
+      padding: 0 1.35em;
+    }
+    #header nav a[href="#menu"]:before {
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-font-smoothing: antialiased;
+      display: inline-block;
+      font-style: normal;
+      font-variant: normal;
+      text-rendering: auto;
+      line-height: 1;
+      text-transform: none !important;
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+    }
+    #header nav a[href="#menu"]:before {
+      content: "\f0c9";
+      line-height: inherit;
+    }
+    #header nav a[href="#menu"]:hover {
+      background-color: rgba(255, 255, 255, 0.025);
+    }
+    #header nav a[href="#menu"]:active {
+      background-color: rgba(255, 255, 255, 0.075);
+    }
+    @media screen and (max-width: 736px) {
+      #header {
+        height: 2.75em;
+        line-height: 2.75em;
+      }
+      #header img{
+          padding-top: 2px;
+          display: flex;
+          margin: 0 auto;
+      }
+    }
+    /* BANNER */
+    #banner {
+      padding: 8em 0 4.75em 0;
+    }
+    #banner .inner {
+      margin: 0 auto;
+      width: 55em;
+    }
+    #banner h2 {
+      -moz-transition: opacity 0.5s ease, -moz-transform 0.5s ease,
+        -moz-filter 0.25s ease;
+      -webkit-transition: opacity 0.5s ease, -webkit-transform 0.5s ease,
+        -webkit-filter 0.25s ease;
+      -ms-transition: opacity 0.5s ease, -ms-transform 0.5s ease,
+        -ms-filter 0.25s ease;
+      transition: opacity 0.5s ease, transform 0.5s ease, filter 0.25s ease;
+      -moz-transform: translateX(0);
+      -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+      transform: translateX(0);
+      -moz-transition-delay: 0.65s;
+      -webkit-transition-delay: 0.65s;
+      -ms-transition-delay: 0.65s;
+      transition-delay: 0.65s;
+      -moz-filter: blur(0);
+      -webkit-filter: blur(0);
+      -ms-filter: blur(0);
+      filter: blur(0);
+      opacity: 1;
+      border-bottom: solid 2px rgba(255, 255, 255, 0.125);
+      font-size: 2.25em;
+      margin-bottom: 0.8em;
+      padding-bottom: 0.4em;
+      text-align: right;
+    }
+    #banner p {
+      -moz-transition: opacity 0.5s ease, -moz-transform 0.5s ease,
+        -moz-filter 0.25s ease;
+      -webkit-transition: opacity 0.5s ease, -webkit-transform 0.5s ease,
+        -webkit-filter 0.25s ease;
+      -ms-transition: opacity 0.5s ease, -ms-transform 0.5s ease,
+        -ms-filter 0.25s ease;
+      transition: opacity 0.5s ease, transform 0.5s ease, filter 0.25s ease;
+      -moz-transform: translateX(0);
+      -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+      transform: translateX(0);
+      -moz-transition-delay: 0.8s;
+      -webkit-transition-delay: 0.8s;
+      -ms-transition-delay: 0.8s;
+      transition-delay: 0.8s;
+      -moz-filter: blur(0);
+      -webkit-filter: blur(0);
+      -ms-filter: blur(0);
+      filter: blur(0);
+      opacity: 1;
+      font-family: Raleway, Helvetica, sans-serif;
+      font-size: 1em;
+      font-weight: 200;
+      letter-spacing: 0.1em;
+      line-height: 2;
+      text-transform: uppercase;
+      text-align: right;
+    }
+    @media screen and (max-width: 1280px) {
+      #banner {
+        padding: 7em 0 8.25em 0;
+        background-color: #474747;
+        background-size: auto, cover;
+        background-position: center, center;
+        margin-bottom: -6.5em;
+        background-image: linear-gradient(to top,rgba(20, 20, 20, 0.945),rgba(20, 20, 20, 0.945)),
+        url("https://lets.gohubtek.com/backgruond1");
+        background-size: auto, cover;
+        background-attachment: fixed, fixed;
+        background-position: center, center;
+        background-repeat: no-repeat !important;
+      }
+    }
+    @media screen and (max-width: 980px) {
+      #banner {
+        padding: 12em 3em 12.375em 3em;
+        margin-bottom: -4.75em;
+      }
+      #banner .inner {
+        width: 100%;
+      }
+    }
+    @media screen and (max-width: 736px) {
+      #banner {
+        padding: 5em 2em 4.25em 2em;
+        margin-bottom: -2.5em;
+      }
+      #banner .logo {
+        margin: 0 0 1em 0;
+      }
+      #banner .logo .icon {
+        font-size: 1.5em;
+      }
+      #banner h2 {
+        font-size: 1.5em;
+        text-align: center;
+      }
+      #banner p {
+        font-size: 0.8em;
+        text-align: center;
+      }
+    }
+    /* WRAPPER */
+    .wrapper {
+      background-color: white;
+      margin: 6.5em 0;
+      position: relative;
+    }
+    .wrapper:after {
+      -moz-transform: scaleY(-1);
+      -webkit-transform: scaleY(-1);
+      -ms-transform: scaleY(-1);
+      transform: scaleY(-1);
+      bottom: -6.5em;
+      left: 0;
+    }
+    .wrapper .inner {
+      padding: 3em 0 1em 0;
+      margin: 0 auto;
+      width: 55em;
+    }
+    .wrapper.spotlight {
+      background: rgba(255, 255, 255, 1);
+    }
+    .wrapper.spotlight .inner {
+      display: -moz-flex;
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      -moz-align-items: center;
+      -webkit-align-items: center;
+      -ms-align-items: center;
+      align-items: center;
+      -moz-flex-direction: row;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+    }
+    .wrapper.spotlight .content {
+      width: 100%;
+      text-align: left;
+      color: black;
+    }
+    .wrapper.spotlight:nth-child(2n - 1) .inner {
+      -moz-flex-direction: row-reverse;
+      -webkit-flex-direction: row-reverse;
+      -ms-flex-direction: row-reverse;
+      flex-direction: row-reverse;
+      text-align: right;
+    }
+    @media screen and (max-width: 980px) {
+      .wrapper {
+        margin: 4.75em 0;
+      }
+      .wrapper:after {
+        bottom: -4.75em;
+        left: 0;
+      }
+      .wrapper .inner {
+        padding: 3em 3em 1em 3em;
+        width: 100%;
+      }
+    }
+    @media screen and (max-width: 736px) {
+      .wrapper {
+        margin: 2.5em 0;
+      }
+      .wrapper:after {
+        bottom: -2.5em;
+        left: 0;
+      }
+      .wrapper .inner {
+        padding: 2em 2em 0.1em 2em;
+      }
+      .wrapper.spotlight .inner {
+        -moz-align-items: -moz-flex-start;
+        -webkit-align-items: -webkit-flex-start;
+        -ms-align-items: -ms-flex-start;
+        align-items: flex-start;
+      }
+    }
+    @media screen and (max-width: 480px) {
+      .wrapper.spotlight .inner {
+        display: block;
+      }
+    }
+    @media screen and (max-width: 360px) {
+      .wrapper .inner {
+        padding: 2em 1.5em 0.1em 1.5em;
+      }
+    }
+    /* FOOTER */
+    #footer .inner {
+      padding: 5em 0 1em 0;
+      display: -moz-flex;
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      -moz-flex-direction: row;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -moz-flex-wrap: wrap;
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      margin: 0 auto;
+      width: 55em;
+    }
+    #footer .inner > * {
+      width: 100%;
+    }
+    #footer .inner form {
+      margin: 0 3em 0 0;
+      width: calc(50% - 1.5em);
+    }
+    #footer .inner .contact {
+      width: calc(50% - 1.5em);
+    }
+    #footer .inner .copyright {
+      border-top: solid 2px rgba(255, 255, 255, 0.600);
+      list-style: none;
+      margin: 4em 0 2em 0;
+      padding: 2em 0 0 0;
+      width: 100%;
+      text-align: center;
+    }
+    #footer .inner .copyright li {
+      color: #fff;
+      display: inline-block;
+      font-size: 0.9em;
+      line-height: 1;
+      margin-left: 1em;
+      padding: 0;
+      padding-left: 1em;
+    }
+    #footer .inner .copyright li a {
+      color: inherit;
+    }
+    @media screen and (max-width: 1280px) {
+      #footer {
+        background-color: #474747;
+        background-size: auto, cover;
+        background-position: center, center;
+        margin-top: -6.5em;
+        padding-top: 6.5em;
+        background-image: linear-gradient(to top,rgba(20, 20, 20, 0.945),rgba(20, 20, 20, 0.945)),
+        url("https://lets.gohubtek.com/backgruond1");
+        background-size: cover;
+        background-attachment: fixed, fixed;
+        background-position: center, center;
+        background-repeat: no-repeat !important;
+      }
+    }
+    @media screen and (max-width: 980px) {
+      #footer {
+        margin-top: -4.75em;
+        padding-top: 4.75em;
+      }
+      #footer .inner {
+        padding: 3em 3em 1em 3em;
+        display: block;
+        width: 100%;
+      }
+      #footer .inner form {
+        width: 100%;
+        margin: 0 0 4em 0;
+      }
+      #footer .inner .contact {
+        width: 100%;
+        margin: 0 0 4em 0;
+        border-left: none;
+      }
+      #footer .inner .copyright {
+        margin: 4em 0 2em 0;
+      }
+    }
+    @media screen and (max-width: 736px) {
+      #footer {
+        margin-top: -2.5em;
+        padding-top: 2.5em;
+      }
+      #footer .inner {
+        padding: 2em 2em 0.1em 2em;
+      }
+      #footer .inner form {
+        margin: 0 0 3em 0;
+      }
+      #footer .inner .contact {
+        margin: 0 0 3em 0;
+      }
+    }
+    @media screen and (max-width: 480px) {
+      #footer .inner .copyright li {
+        border-left: 0;
+        display: block;
+        margin: 1em 0 0 0;
+        padding-left: 0;
+      }
+      #footer .inner .copyright li:first-child {
+        margin-top: 0;
+      }
+    }
+    @media screen and (max-width: 360px) {
+      #footer .inner {
+        padding: 2em 1.5em 0.1em 1.5em;
+      }
+    }
+    /* EBOOK */
+    .ebook{
+        width: 307px !important;
+        height: 460px;
+        text-align: left;
+        box-shadow: 9px 15px 25px 0px #000000c2;
+    }
+    .texto-ebook{
+        padding-top: 2%;
+    }
+    .texto-ebook p,h2{
+      text-align: start !important;
+    }
+    /* RESPONSIVE EBOOK, VIDEO, CALCULATOR */
+    @media (width: 800px) {
+      .texto-ebook p,h2{
+        text-align: left !important;
+      }
+      .texto-ebook p{
+        font-size: 14px !important;
+        text-align: left !important;
+        padding-left: 20%;
+      }
+      .texto-ebook h2{
+        padding-top: 5%;
+        font-size: 17px !important;
+        padding-left: 20%;
+      }
+      #banner h2{
+        border-bottom: none;
+      }
+    }
+    @media (width: 1024px) {
+      .texto-ebook p,h2{
+        text-align: left !important;
+      }
+      .texto-ebook p{
+        font-size: 18px !important;
+        text-align: left !important;
+      }
+      .texto-ebook h2{
+        padding-top: 5%;
+        font-size: 22px !important;
+      }
+    }
+    @media (width: 1280px) {
+      .texto-ebook p,h2{
+        text-align: left !important;
+      }
+      .texto-ebook p{
+        font-size: 20px !important;
+        text-align: left !important;
+      }
+      .texto-ebook h2{
+        padding-top: 5%;
+        font-size: 26px !important;
+      }
+    }
+    @media screen and (max-width: 736px) {
+      .ebook{
+          width: 200px !important;
+          height: 225px;
+          display: flex;
+          margin: 0 auto;
+      }
+      #video{
+        height: 50% !important;
+        width: 100% !important;
+      }
+      #calculator{
+        width: 100% !important;
+        border: none !important;
+        padding-top: 150px;
+      }
+      .texto-ebook p,h2{
+        text-align: center !important;
+      }
+      .texto-ebook h2{
+        padding-top: 5%;
+        font-size: 16px !important;
+      }
+    }
+    @media screen and (max-width: 768px){
+      .ebook{
+        width: 200px !important;
+        height: auto;
+        display: flex;
+        margin: 0 auto;
+        /* padding-top: 15%; */
+      }
+      #video{
+        height: 50% !important;
+        width: 100% !important;
+      }
+      #calculator{
+        width: 100% !important;
+        border: none !important;
+      }
+      .texto-ebook p,h2{
+        text-align: center !important;
+      }
+      .texto-ebook h2{
+        padding-top: 5%;
+        font-size: 16px !important;
+      }
+    }
+    .texto-video{
+      color: rgba(0, 0, 0, 0.650) !important;
+      text-align: start !important;
+      font-family: 'Signika', sans-serif !important;
+      letter-spacing: normal !important;
+      text-transform: none !important;
+      font-weight: 100;
+    }
+    .texto-video li{
+      padding-left: 10%;
+    }
+</style>
+<body class="">
+<div><!-- Header -->
+<header id="header"><img alt="" src="https://www.gohubtek.com/wp/wp-content/uploads/2019/07/logo-final.png" /></header>
+<!-- Banner -->
+
+<section id="banner">
+<div class="inner">
+<div>&nbsp;</div>
+
+<div class="row">
+<div class="col-md-6"><!-- REPORT - EBOOK --><img alt="" class="ebook" src="https://lets.gohubtek.com/l/799063/2020-01-14/7c1l/799063/13477/the_true_cost_of_employment_report_2__1_.png" /></div>
+
+<div class="texto-ebook col-md-6">
+<h2 style="font-size: 30px;">Talent is expensive.<br />
+Unemployment is low.<br />
+Recruiting takes time.</h2>
+
+<p>Not anymore.<br />
+<br />
+Contain costs and boost your workforce in weeks. Download our report to discover your potential savings.</p>
+</div>
+</div>
+
+<div class="row" style="padding-top: 2%;">
+<div class="col-md-4">&nbsp;</div>
+<a class="col-md-4 button" href="#formebook">Download</a>
+
+<div class="col-md-4">&nbsp;</div>
+</div>
+</div>
+</section>
+<!-- One -->
+
+<section class="wrapper spotlight">
+<div class="inner">
+<div class="row">
+<div class="col-md-6 content">
+<h2 style="color: rgba(0, 0, 0, 0.830); font-size: 28px; padding-bottom: 5%; text-align: center !important;">Calculate Your ROI</h2>
+
+<div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;">
+  <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
+    <iframe allowfullscreen="" allowtransparency="true" class="wistia_embed" frameborder="0" height="100%" mozallowfullscreen="" msallowfullscreen="" name="wistia_embed" oallowfullscreen="" scrolling="no" src="https://fast.wistia.net/embed/iframe/ol0lbwxuak?videoFoam=true" title="Calculator Video " webkitallowfullscreen="" width="100%"></iframe>
+  </div>
+</div>
+
+<h2 class="texto-video"><br><br>
+  Want to know your ROI with a Hubtek partnership? <br><br>
+  Watch the video to learn how to use the ROI calculator. It’s a powerful tool that enables you to discover just how much you can save with Hubtek. <br><br>
+  Still unsure? <br><br>
+  Download our report for an in-depth analysis on the cost saving benefits of Hubtek and learn: <br><br>
+
+  <li>Cost comparisons</li>
+  <li>Potential savings</li>
+  <li>Growth potential</li>
+</h2>
+
+<h2 class="texto-video" style="letter-spacing: normal !important; text-transform: none !important; font-weight: 100;">
+  Scroll down to get the report. <br><br><br>
+  (Psst...&nbsp;if you want to know how we calculated your ROI with Hubtek, <a href="https://calendly.com/hubtekvpoc/discoverycallemail"><span style="color:#0000FF; text-decoration: none;">contact us</span></a><span style="color: rgba(0, 0, 0, 0.650);"> to find out!)</span>
+</h2>
+
+</div>
+
+<div class="col-md-6">
+  <!-- CALCULATOR -->
+  <iframe frameborder="0" height="640px" name="Calconic_ Calculator" sandbox="allow-same-origin allow-forms allow-scripts allow-top-navigation allow-popups-to-escape-sandbox allow-popups" scrolling="yes" src="https://app.calconic.com/api/embed/calculator/5d83e9bb54e7dd001eadd22d" style="width: 300px; border: 0; border: 2px solid rgba(74, 74, 74, 1); border-radius: 8px; outline: none;" title="Calconic_ Calculator"></iframe>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Footer -->
+<section id="footer">
+  <div id="formebook" class="inner">
+
+      <form accept-charset="UTF-8" method="post" action="https://lets.gohubtek.com/l/799063/2020-01-10/778x" class="form" id="pardot-form">
+
+        <h3 class="col-md-12 major">Download your report</h3>
+
+        <p class="form-field  first_name pd-text">
+          <label class="field-label" for="799063_18771pi_799063_18771" style="padding-top: 0.5%;">First Name</label>
+          <input type="text" name="799063_18771pi_799063_18771" id="799063_18771pi_799063_18771" value="" class="text" size="30" maxlength="40" onchange="" onfocus="" />
+        </p>
+
+        <div id="error_for_799063_18771pi_799063_18771" style="display:none"></div>
+
+        <p class="form-field  last_name pd-text">
+          <label class="field-label" for="799063_18773pi_799063_18773">Last Name</label>
+          <input type="text" name="799063_18773pi_799063_18773" id="799063_18773pi_799063_18773" value="" class="text" size="30" maxlength="80" onchange="" onfocus="" />
+        </p>
+
+        <div id="error_for_799063_18773pi_799063_18773" style="display:none"></div>
+              
+        <p class="form-field  email pd-text required">
+          <label class="field-label" for="799063_18775pi_799063_18775">Email</label>
+          <input type="text" name="799063_18775pi_799063_18775" id="799063_18775pi_799063_18775" value="" class="text" size="30" maxlength="255" onchange="piAjax.auditEmailField(this, 799063, 18775, 167637);" onfocus="" />
+        </p>
+        
+        <div id="error_for_799063_18775pi_799063_18775" style="display:none"></div>
+        
+        <p style="position:absolute; width:190px; left:-9999px; top: -9999px;visibility:hidden;">
+          <label for="pi_extra_field">Comments</label>
+          <input type="text" name="pi_extra_field" id="pi_extra_field"/>
+        </p>
+            
+        <!-- forces IE5-8 to correctly submit UTF8 content  -->
+        <input name="_utf8" type="hidden" value="&#9731;" />
+            
+        <p class="submit">
+          <input type="submit" accesskey="s" value="SUBMIT" />
+        </p>
+        <input type="hidden" name="hiddenDependentFields" id="hiddenDependentFields" value="" />
+      </form>
+        <!-- endform -->
+
+        <!-- contact -->
+
+      <ul class="contact">
+        <div class="sharebottom">
+          <h3 class="col-md-12 major">Share in your social media</h3>
+        </div>
+        <div data-network="facebook" class="st-custom-button icons"> Facebook</div>
+        <div data-network="linkedin" class="st-custom-button icons"> Linkedin</div>
+        <div data-network="twitter" class="st-custom-button icons"> Twitter</div>
+        <div data-network="gmail" class="st-custom-button icons"> Gmail</div>
+      </ul>
+      <ul class="copyright">
+        <li> &copy; Hubtek - All rights reserved.</li>
+      </ul>
+  </div>
+</section>
+
+</div>
+
+<!-- SCRIPTS PARDOT -->
+
+<script type="text/javascript" src="https://go.pardot.com/js/piUtils.js?ver=202001021110"></script><script type="text/javascript">
+piAId = '800063';
+piCId = '17583';
+piHostname = 'pi.pardot.com';
+if(!window['pi']) { window['pi'] = {}; } pi = window['pi']; if(!pi['tracker']) { pi['tracker'] = {}; } pi.tracker.pi_form = true;
+(function() {
+  function async_load(){
+    var s = document.createElement('script'); s.type = 'text/javascript';
+    s.src = ('https:' == document.location.protocol ? 'https://pi' : 'http://cdn') + '.pardot.com/pd.js';
+    var c = document.getElementsByTagName('script')[0]; c.parentNode.insertBefore(s, c);
+  }
+  if(window.attachEvent) { window.attachEvent('onload', async_load); }
+  else { window.addEventListener('load', async_load, false); }
+})();
+</script>
+
+<script type="text/javascript">(function(){ pardot.$(document).ready(function(){ (function() {
+var $ = window.pardot.$;
+window.pardot.FormDependencyMap = [];
+
+$('.form-field-master input, .form-field-master select').each(function(index, input) {
+  $(input).on('change', window.piAjax.checkForDependentField);
+  window.piAjax.checkForDependentField.call(input);
+});
+})(); });})();
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+
+  var anchors = document.getElementsByTagName("a");
+  for (var i=0; i<anchors.length; i++) {
+    var anchor = anchors[i];
+    if(anchor.getAttribute("href")&&!anchor.getAttribute("target")) {
+      anchor.target = "_top";
+    }
+  }
+    
+//]]>
+</script>
+
+<!-- END SCRIPTS PARDOT -->
+
+<!-- SCRIPT WISTIA -->
+<script src="https://fast.wistia.net/assets/external/E-v1.js" async></script>
+<!-- == -->
+<script type="text/javascript" src="//platform-api.sharethis.com/js/sharethis.js#property=#{property?._id}&product=custom-share-buttons"></script>
+
+
+<!-- CALCONIC -->
+<script>
+(function() {
+  window.addEventListener("message",function(t){
+    var e="https://www.paypalobjects.com/api/checkout.4.0.141.js";
+    if(!document.querySelector('script[src="'+e+'"]')&&t.data&&"LOAD_PAYPAL"===t.data.action){
+    var a=document.createElement("script");a.src=e,a.async=!0,a.dataset={paypalCheckout:!0,noBridge:!0,state:"ppxo_meta",env:"production"},document.body.append(a)
+    }if(t.data&&"CALCONIC_UPDATE_HEIGHT"===t.data.action){
+    var s=documenet.querySelector('iframe[src="https://app.calconic.com/api/embed/calculator/t.data.payload.id"]');
+    if(s){s.height=t.data.payload.height}}
+  });
+})();
+</script>
+
+</body>
+</html>
